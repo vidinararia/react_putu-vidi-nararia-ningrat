@@ -7,7 +7,11 @@ import reportWebVitals from './reportWebVitals';
 ReactDOM.render(
   <React.StrictMode>
     <h1>React-Js</h1>
+<<<<<<< HEAD
     <h2>Develop</h2>
+=======
+    <h2>Feature</h2>
+>>>>>>> feature
   </React.StrictMode>,
   document.getElementById('root')
 );
