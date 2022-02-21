@@ -8,6 +8,7 @@ ReactDOM.render(
   <React.StrictMode>
     <h1>React-Js</h1>
     <h2>Develop</h2>
+    <h3>featureA</h3>
   </React.StrictMode>,
   document.getElementById('root')
 );
