@@ -22,3 +22,7 @@ Berikut hasil code dari praktikum ini.
 
 Output:
 ![reactjs](./screenshot/4.PNG)
+
+### Mini Project Figma
+
+[MiniProject.txt](./praktikum/MiniProject.txt)
