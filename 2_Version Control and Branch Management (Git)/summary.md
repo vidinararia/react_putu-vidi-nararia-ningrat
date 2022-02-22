@@ -19,3 +19,6 @@ Pada task ini telah terbuat sebuah git server sendiri dengan berisi file react j
 Berikut hasil code dari praktikum ini.
 
 [index.js](./praktikum/web-react-saya/src/index.js)
+
+Output:
+![reactjs](./screenshot/4.PNG)
