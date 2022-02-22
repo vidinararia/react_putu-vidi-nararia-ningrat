@@ -15,7 +15,7 @@ Pada versioning control untuk react js dengan menggunakan node.js yang digunakan
 
 ## task
 ### Membuat React Js
-Pada task ini telah terbuat sebuah git server sendiri dengan berisi file react js. Git server ini merupakan hasil pembelajaran dari verioning control.
+Pada task ini telah terbuat sebuah git server sendiri dengan berisi file react js. Git server ini merupakan hasil pembelajaran dari versioning control.
 Berikut hasil code dari praktikum ini.
 
 [index.js](./praktikum/web-react-saya/src/index.js)
