@@ -18,16 +18,21 @@ CSS atau kepanjangannya Cascade Style Sheet adalah bahasa kedua dari HTML, CSS s
 Pada task pertama ini disuruh untuk mengubah tampilan dari file html yang telah diberikan. task pertama ini saya memakai CSS Internal dikarenakan tidak banyak tampilan yang perlu saya gunakan.
 
 Berikut merupakan file dan juga Screenshot hasilnya.
+
 [file1.html](./praktikum/file1.html)
 
 Output:
+
 ![1.PNG](./screenshot/1.PNG)
 
 ### Membuat tampilan web dengan CSS
 Pada task kedua ini disuruh untuk membuat tampilan web yang sudah diberikan dengan background pattern dan juga logo pada web. task kedua ini saya memakai CSS External dikarenkan banyak tampilan yang harus dibuat.
 
 Berikut merupakan file dan juga hasilnya.
+
 [file2.html](./praktikum/file2.html)
+[style.css](./praktikum/style.css)
 
 Output:
+
 ![2.PNG](./screenshot/2.PNG)
