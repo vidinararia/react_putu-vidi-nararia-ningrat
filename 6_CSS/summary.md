@@ -31,6 +31,7 @@ Pada task kedua ini disuruh untuk membuat tampilan web yang sudah diberikan deng
 Berikut merupakan file dan juga hasilnya.
 
 [file2.html](./praktikum/file2.html)
+
 [style.css](./praktikum/style.css)
 
 Output:
