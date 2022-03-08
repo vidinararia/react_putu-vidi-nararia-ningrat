@@ -11,6 +11,9 @@ Bootstrap merukapan framework yang free dan open-source yang digunakan untuk mem
 ## task
 pada task ini telah terbuat sebuah halaman website dengan menggunakan bootstrap sebagai framework.
 
+1. [Membuat Navbar](#membuat-navbar)
+2. [Membuat Main Content](#membuat-main-content)
+3. [membuat footer](#membuat-footer)
 
 ### Membuat Navbar
 pada bagian awal ini disuruh untuk membuat navbar dengan bootstrap.
