@@ -60,7 +60,9 @@ output:
 
 ### jawaban no 2
 a. dikarenakan pada baris 21, 22, dan 23 terdaftar masih bernilai false dan juga belum ada perubahan dalam code yang membuat nilai terdaftar bernilai true.
+
 b. dikarenakan pada baris 26 ada error pada nama yang merupakan constant jika ingin menjalankan baris 26 maka harus merubah tipe variable nama menjadi let atau var.
+
 c. tidak, dikarenakan pada line 28 terdapat variable yang di assign pada function perkenalan, jadi variable tersebut hanya bisa digunakan disana, dan hal tersebut membuat code line no 29 menjadi tidak berjalan.
 
 ### jawaban no 3
