@@ -1,11 +1,14 @@
-import React, {useState} from 'react';
-import contact_us from './contact_us';
-import Home from './Home';
+import React from "react";
+import Home from "Home";
+import contact_us from "./contact_us";
 
 function App() {
   return (
-    <Home />
-  )
+    <>
+      {/* <contact_us /> */}
+      <Home />
+    </>
+  );
 }
 
 export default App;
