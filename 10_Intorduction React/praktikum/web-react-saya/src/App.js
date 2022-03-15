@@ -1,12 +1,12 @@
 import React from "react";
-import Home from "Home";
-import contact_us from "./contact_us";
+import Home from "./Home";
+import Contact_us from "./Contact_us";
 
 function App() {
   return (
     <>
-      {/* <contact_us /> */}
-      <Home />
+      <Contact_us />
+      {/* <Home /> */}
     </>
   );
 }
