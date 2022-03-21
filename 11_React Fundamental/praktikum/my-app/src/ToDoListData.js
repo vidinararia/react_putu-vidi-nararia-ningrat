@@ -1,4 +1,4 @@
-export const mockUsers = [
+export const ToDoListData = [
   {
     id: 1,
     title: "Membuat Komponen",
