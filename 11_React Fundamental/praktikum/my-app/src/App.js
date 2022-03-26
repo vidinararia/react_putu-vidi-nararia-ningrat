@@ -1,5 +1,4 @@
 import Home from "./pages/Home";
-import { ToDoListData } from "./ToDoListData";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import AboutApp from "./pages/AboutApp";
 import AboutAuthor from "./pages/AboutAuthor";
@@ -13,7 +12,7 @@ function App() {
       <Router>
         <Navbar />
         <Routes>
-          <Route path="/" exact element={<Home user={ToDoListData} />} />
+          <Route path="/" exact element={<Home />} />
           <Route path="/AboutApp" element={<AboutApp />} />
           <Route path="/AboutAuthor" element={<AboutAuthor />} />
           <Route path="*" element={<NotFound />} />

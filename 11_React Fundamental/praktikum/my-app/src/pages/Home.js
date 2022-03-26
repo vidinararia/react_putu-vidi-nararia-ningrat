@@ -1,14 +1,13 @@
 import React from "react";
-import ToDoList from "../components/ToDoList";
+import Todos from "../components/Todos";
 
-export default function Home({ user }) {
+function Home() {
   return (
-    <>
-      <div className="home">
-        {user.map((user) => (
-          <ToDoList user={user} />
-        ))}
-      </div>
-    </>
+    <div>
+      <h1 className="text-center">todos</h1>
+      <Todos />
+    </div>
   );
 }
+
+export default Home;
