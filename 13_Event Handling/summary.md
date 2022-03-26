@@ -4,6 +4,10 @@
 
 pada section ini saya mendapatkan poin-poin penting yaitu ada:
 
+1. Mempelajari component state
+2. Menggunakan list event berupa OnSubmit, OnChange, dan OnSubmit
+3. mengetahui perbedaan tipe component stateless dengan statefull
+
 ## task
 
 ### membuat todos list
