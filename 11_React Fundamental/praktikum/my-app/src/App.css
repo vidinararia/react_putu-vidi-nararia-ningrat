@@ -6,12 +6,3 @@
   padding: 0;
   font-family: "Roboto", sans-serif;
 }
-
-.aboutapp,
-.aboutauthor,
-.notfound {
-  height: 90vh;
-  font-size: 1rem;
-  text-align: center;
-  margin: 10px 100px;
-}

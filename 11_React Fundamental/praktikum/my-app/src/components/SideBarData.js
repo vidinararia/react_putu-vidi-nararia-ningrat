@@ -16,4 +16,9 @@ export const SideBarData = [
     path: "/AboutAuthor",
     cName: "nav-text",
   },
+  {
+    title: "Form",
+    path: "/Form",
+    cName: "nav-text",
+  },
 ];

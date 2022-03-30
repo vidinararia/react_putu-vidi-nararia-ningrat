@@ -2,8 +2,8 @@ import React from "react";
 
 function AboutApp() {
   return (
-    <div className="aboutapp">
-      <h1>About the App</h1>
+    <div>
+      <h1 className="text-center">About the App</h1>
       <p>
         In this app, you can add, delete, submit and edit items. To edit items,
         simply double click on it. Once you are done, press the enter key to

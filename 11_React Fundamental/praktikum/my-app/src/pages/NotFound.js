@@ -2,8 +2,8 @@ import React from "react";
 
 function NotFound() {
   return (
-    <div className="notfound">
-      <h1>Opps! Something went wrong!</h1>
+    <div>
+      <h1 className="text-center">Opps! Something went wrong!</h1>
       <a href="/" className="btn btn-primary m-5">
         Homepage
       </a>
