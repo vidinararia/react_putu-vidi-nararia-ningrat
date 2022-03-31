@@ -47,18 +47,18 @@ function Forms() {
       console.log(errorMessage);
       alert("data Pendaftar Tidak Sesuai");
     }
-    console.log("data", data);
+    console.log(data);
   };
 
   return (
     <div>
       <div className="container">
         <form onSubmit={(e) => handleSubmit(e)}>
-          <div class="mb-3">
-            <label class="form-label">Nama Lengkap:</label>
+          <div className="mb-3">
+            <label className="form-label">Nama Lengkap:</label>
             <input
               type="text"
-              class="form-control"
+              className="form-control"
               name="nama"
               aria-describedby="emailHelp"
               value={data.nama}
@@ -66,13 +66,13 @@ function Forms() {
               required
             />
           </div>
-          <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">
+          <div className="mb-3">
+            <label htmlFor="exampleInputEmail1" className="form-label">
               Email:
             </label>
             <input
               type="email"
-              class="form-control"
+              className="form-control"
               name="email"
               aria-describedby="emailHelp"
               value={data.email}
@@ -80,15 +80,15 @@ function Forms() {
               required
             />
           </div>
-          <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">
+          <div className="mb-3">
+            <label htmlFor="exampleInputPassword1" className="form-label">
               No Handphone
             </label>
             <input
               type="text"
               minLength="9"
               maxLength="14"
-              class="form-control"
+              className="form-control"
               name="noHandphone"
               value={data.noHandphone}
               onChange={(e) => handleChange(e)}
@@ -97,43 +97,42 @@ function Forms() {
           </div>
           <p>Latar Belakang Pendidikan : </p>
           <div className="d-inline-flex">
-            <div class="form-check">
+            <div className="form-check">
               <input
-                class="form-check-input"
+                className="form-check-input"
                 type="radio"
                 name="pendidikan"
                 value="IT"
                 onChange={(e) => handleChange(e)}
                 required
               />
-              <label class="form-check-label" for="exampleRadios1">
+              <label className="form-check-label" htmlFor="exampleRadios1">
                 IT
               </label>
             </div>
-            <div class="form-check mx-3">
+            <div className="form-check mx-3">
               <input
-                class="form-check-input"
+                className="form-check-input"
                 type="radio"
                 name="pendidikan"
                 value="Non IT"
                 onChange={(e) => handleChange(e)}
               />
-              <label class="form-check-label" for="exampleRadios2">
+              <label className="form-check-label" htmlFor="exampleRadios2">
                 Non IT
               </label>
             </div>
           </div>
           <p className="mt-3">Kelas Coding yang dipilih :</p>
           <select
-            class="form-select"
+            className="form-select"
             aria-label="Default select example"
             name="kelas"
             onChange={(e) => handleChange(e)}
+            alue="blank"
             required
           >
-            <option selected value="blank">
-              Pilih Salah Satu Program
-            </option>
+            <option>Pilih Salah Satu Program</option>
             <option value="Coding Backend with Golang">
               Coding Backend with Golang
             </option>
@@ -142,21 +141,21 @@ function Forms() {
             </option>
             <option value="Fullstack Developer">Fullstack Developer</option>
           </select>
-          <div class="my-3">
+          <div className="my-3">
             <p>Foto surat kesungguhan :</p>
             <input
               type="file"
-              class="form-control"
+              className="form-control"
               id="inputGroupFile02"
               ref={suratKesungguhan}
               accept="image/*"
               required
             />
           </div>
-          <div class="mb-3">
+          <div className="mb-3">
             <label>Harapan Untuk Coding Bootcamp ini :</label>
             <textarea
-              class="form-control"
+              className="form-control"
               name="harapan"
               rows="3"
               value={data.harapan}
@@ -168,10 +167,13 @@ function Forms() {
               <li key={i}>{item.error} </li>
             ))}{" "}
           </ul>
-          <button type="submit" class="btn btn-success mt-3 px-4">
+          <button type="submit" className="btn btn-success mt-3 px-4">
             Submit
           </button>
-          <button class="btn btn-danger mt-3 mx-3 px-4" onClick={handleReset}>
+          <button
+            className="btn btn-danger mt-3 mx-3 px-4"
+            onClick={handleReset}
+          >
             Reset
           </button>
         </form>
