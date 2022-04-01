@@ -1,55 +1,49 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
 
-class AddTodo extends Component {
-  state = {
-    defaultValue: "",
-    value: this.props.addTodotitle,
-  };
+function AddTodo() {
+  const [defaultValue, setDefaultValue] = useState("");
+  const [fooAddTodo, setFooAddTodo] = useState("");
 
-  handleChange = (e) => {
+  const handleChange = (e) => {
     //Updating local component state
-    this.setState({
+    setDefaultValue({
       value: e.target.value,
     });
   };
 
-  clearInput = () => {
+  const clearInput = () => {
     //Clear existing value in input
     document.getElementById("todoTitle").value = "";
 
     //Updating local component state
-    this.setState({ value: "" });
+    setDefaultValue({ value: "" });
   };
 
-  addTodo = () => {
-    //Call method reference in Todos component using props
-    this.props.fooAddTodo(this.state.value);
-    this.clearInput();
+  const addTodo = () => {
+    clearInput();
   };
 
-  render() {
-    return (
-      <div>
-        <input
-          type="text"
-          className="form-control"
-          id="todoTitle"
-          placeholder="ToDo"
-          onChange={this.handleChange}
-        />
-        <div className="input-group-append">
-          <button
-            onClick={this.addTodo}
-            className="btn btn-outline-secondary"
-            type="button"
-            id="button-addon2"
-          >
-            Add New ToDo
-          </button>
-        </div>
+  return (
+    <div>
+      <input
+        type="text"
+        className="form-control"
+        id="todoTitle"
+        placeholder="ToDo"
+        onChange={handleChange}
+      />
+      <div className="input-group-append">
+        <button
+          onClick={addTodo}
+          className="btn btn-outline-secondary"
+          type="button"
+          id="button-addon2"
+        >
+          Add New ToDo
+        </button>
       </div>
-    );
-  }
+    </div>
+  );
 }
 
 export default AddTodo;

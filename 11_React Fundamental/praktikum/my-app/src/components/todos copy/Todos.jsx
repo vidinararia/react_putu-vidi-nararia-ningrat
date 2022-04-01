@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-
 import Todo from "./Todo";
 import AddTodo from "./AddTodo";
 
@@ -18,7 +17,7 @@ const todos = [
 
 function Todos() {
   const [data, setData] = useState(todos);
-  const [addTodotitle] = useState("");
+  const [addTodotitle, setAddTodotitle] = useState("");
 
   //Local helper method to get date
   function getTime() {
@@ -29,34 +28,33 @@ function Todos() {
 
   //method called from Todo component
   const handleDelete = (todo) => {
-    setData((todos) =>
-      todos.filter((t) => {
-        return t.id !== todo;
-      })
-    );
+    const todos = todos.filter((t) => {
+      return t.id !== todo;
+    });
+    setData(todos);
   };
 
   const handeCompleted = (todo) => {
-    setData = [...todos];
+    const todos = [...todos];
     todos.map((t) => {
       if (t.id === todo.id) {
         t.completed = !t.completed;
       }
       return t;
     });
-    setData({ todos });
+    setData(todos);
   };
 
   //method called from AddTodo component
   const addNewTodo = (title) => {
     if (title) {
-      setData = [...todos];
+      const todos = [...todos];
       todos.push({
         id: getTime(),
         title: title,
         completed: false,
       });
-      setData({ addTodotitle: "", todos });
+      setAddTodotitle(addTodotitle, todos);
     } else {
       console.log("Please Add Todo Text");
     }

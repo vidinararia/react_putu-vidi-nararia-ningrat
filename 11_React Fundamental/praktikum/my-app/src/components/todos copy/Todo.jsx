@@ -1,35 +1,35 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
+import Todos from "./Todos";
 
-class Todo extends Component {
-  render() {
-    return (
-      <React.Fragment>
-        <td style={{ width: 10 }} className="text-center">
-          {this.props.index}
-        </td>
-        <td style={{ width: 15 }} className="text-center">
-          <input
-            type="checkbox"
-            defaultChecked={this.props.todo.completed}
-            onChange={() => this.props.fooDoneDone(this.props.todo)}
-          />
-        </td>
-        <td>{this.renderTodo()}</td>
-        <td style={{ width: 100 }} className="text-center">
-          <button
-            onClick={() => this.props.fooDelete(this.props.todo.id)}
-            className="btn btn-danger btn-sm"
-          >
-            Delete
-          </button>
-        </td>
-      </React.Fragment>
-    );
-  }
+function Todo() {
+  const [fooDoneDone, setFooDoneDone] = useState("");
+  const [fooDelete, setFooDelete] = useState();
 
-  renderTodo() {
-    if (this.props.todo.completed) return <s>{this.props.todo.title}</s>;
-    else return this.props.todo.title;
+  return (
+    <React.Fragment>
+      <td style={{ width: 10 }} className="text-center"></td>
+      <td style={{ width: 15 }} className="text-center">
+        <input
+          type="checkbox"
+          defaultChecked={Todos.completed}
+          onChange={() => fooDoneDone(Todo)}
+        />
+      </td>
+      <td></td>
+      <td style={{ width: 100 }} className="text-center">
+        <button
+          onClick={() => fooDelete(Todos.id)}
+          className="btn btn-danger btn-sm"
+        >
+          Delete
+        </button>
+      </td>
+    </React.Fragment>
+  );
+
+  {
+    if (Todos.completed) return <s>{Todos.title}</s>;
+    else return Todos.title;
   }
 }
 
