@@ -1,11 +1,11 @@
 import React from "react";
-import Todos from "../components/todos copy/Todos";
+import ToDoUseState from "../components/todos copy/ToDoUseState";
 
 function TodoFunction() {
   return (
     <div className="container">
       <h1 className="text-center">todos with function</h1>
-      <Todos />
+      <ToDoUseState />
     </div>
   );
 }
