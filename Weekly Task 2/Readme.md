@@ -2,4 +2,5 @@
 
 tugas sudah di deploy dengan menggunakan surge
 
-[tugasWeekly2-vidinararia.surge.sh](tugasWeekly2-vidinararia.surge.sh)
+dengan domain:
+tugasWeekly2-vidinararia.surge.sh
