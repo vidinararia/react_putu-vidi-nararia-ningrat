@@ -1,0 +1,48 @@
+query MyQuery {
+    keterangan(where: {status: {_eq: true}}) {
+      anggota {
+        nama
+        id
+      }
+      id_anggota
+      status
+    }
+  }
+  
+  mutation MyMutation {
+    insert_keterangan(
+      objects: {
+      id_anggota: 3, 
+      nilai: 90, 
+      pelajaran: "Sistem Informasi", 
+      status: true, id: 5}) {
+      returning {
+        id
+      }
+    }
+  }
+  
+
+  mutation MyMutation {
+    insert_keterangan(
+      objects: {
+      id_anggota: 3, 
+      nilai: 55, 
+      pelajaran: "React", 
+      status: false, id: 6}) {
+      returning {
+        id
+      }
+    }
+  }
+  
+  mutation MyMutation {
+    update_keterangan(where: {status: {_eq: false}},
+    _set: {
+      status: true}) {
+      returning {
+        status
+      }
+    }
+  }
+  
