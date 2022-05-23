@@ -1,15 +1,16 @@
 import ListItem from "./ListItem";
-import { useQuery } from "@apollo/client";
+import { useSubscription } from "@apollo/client";
 import { GET_PENGUNJUNG } from "../graphql/Query";
 import { useMutation } from "@apollo/client";
 import { DELETE_PENGUNJUNG_BY_ID } from "../graphql/Mutation";
+import { SUBSCRIPTION_PENGUNJUNG } from "../graphql/Subscription";
 
 const ListPassenger = () => {
-  const { loading, error, data } = useQuery(GET_PENGUNJUNG);
   const [deletePengunjung, { loading: loadingDelete }] = useMutation(
     DELETE_PENGUNJUNG_BY_ID,
     { refetchQueries: [GET_PENGUNJUNG] }
   );
+  const { loading, error, data } = useSubscription(SUBSCRIPTION_PENGUNJUNG);
 
   const hapusPengunjung = (id) => {
     deletePengunjung({
