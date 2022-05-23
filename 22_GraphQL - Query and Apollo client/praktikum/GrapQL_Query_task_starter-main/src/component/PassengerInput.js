@@ -1,12 +1,19 @@
+import { useMutation } from "@apollo/client";
 import { useState } from "react";
+import { INSERT_PENGUNJUNG_BY_ID } from "../graphql/Mutation";
+import { GET_PENGUNJUNG } from "../graphql/Query";
 import "./Home.css";
 
-function PassengerInput(props) {
+function PassengerInput() {
   const [state, setState] = useState({
     nama: "",
     umur: "",
-    jenisKelamin: "Pria",
+    jeniskelamin: "Pria",
     editing: true,
+  });
+
+  const [insertPengunjung, { loading }] = useMutation(INSERT_PENGUNJUNG_BY_ID, {
+    refetchQueries: [GET_PENGUNJUNG],
   });
 
   const onChange = (e) => {
@@ -17,22 +24,19 @@ function PassengerInput(props) {
   };
 
   const handleSubmit = (e) => {
-    if (state.nama.trim() && state.umur && state.jenisKelamin) {
+    if (state.nama.trim() && state.umur && state.jeniskelamin) {
       const umur = state.umur;
       if (umur >= 75 || umur <= 12) {
         alert("Umur tidak sesuai");
       } else {
-        const newData = {
-          nama: state.nama,
-          umur: state.umur,
-          jenisKelamin: state.jenisKelamin,
-        };
-        props.tambahPengunjung(newData);
-        setState({
-          ...state,
-          nama: "",
-          umur: "",
-          jenisKelamin: "Pria",
+        insertPengunjung({
+          variables: {
+            object: {
+              nama: state.nama,
+              umur: state.umur,
+              jeniskelamin: state.jeniskelamin,
+            },
+          },
         });
       }
     } else {
@@ -63,6 +67,10 @@ function PassengerInput(props) {
     editMode.display = "none";
   }
 
+  if (loading) {
+    return "Loading...";
+  }
+
   return (
     <div>
       <div onSubmit={handleSubmit} style={viewMode}>
@@ -85,7 +93,7 @@ function PassengerInput(props) {
           onChange={onChange}
         />
         <p>Masukkan Jenis Kelamin Anda</p>
-        <select onChange={onChange} name="jenisKelamin">
+        <select onChange={onChange} name="jeniskelamin">
           <option value="Pria" selected>
             Pria
           </option>

@@ -1,11 +1,25 @@
 import ListItem from "./ListItem";
 import { useQuery } from "@apollo/client";
 import { GET_PENGUNJUNG } from "../graphql/Query";
+import { useMutation } from "@apollo/client";
+import { DELETE_PENGUNJUNG_BY_ID } from "../graphql/Mutation";
 
-const ListPassenger = (props) => {
+const ListPassenger = () => {
   const { loading, error, data } = useQuery(GET_PENGUNJUNG);
+  const [deletePengunjung, { loading: loadingDelete }] = useMutation(
+    DELETE_PENGUNJUNG_BY_ID,
+    { refetchQueries: [GET_PENGUNJUNG] }
+  );
 
-  if (loading) {
+  const hapusPengunjung = (id) => {
+    deletePengunjung({
+      variables: {
+        id: id,
+      },
+    });
+  };
+
+  if (loading || loadingDelete) {
     return "Loading...";
   }
 
@@ -27,7 +41,7 @@ const ListPassenger = (props) => {
           <ListItem
             key={item.id}
             data={item}
-            hapusPengunjung={props.hapusPengunjung}
+            hapusPengunjung={hapusPengunjung}
           />
         ))}
       </table>
